@@ -1,0 +1,50 @@
+ul {
+    list-style: none;
+    max-width: 300px;
+}
+
+li {
+    border-bottom: 1px solid white;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.black {
+    background-color: black;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.h1style {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.red {
+    background-color: green;
+}
+
+.two {
+    background-color: yellow;
+}
+
+.yellow {
+    background-color: blue;
+}

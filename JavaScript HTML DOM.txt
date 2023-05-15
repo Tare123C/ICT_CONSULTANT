@@ -1,0 +1,213 @@
+8. JavaScript DOM manipulation
+8.1 - Relationship between JavaScript and HTML: why do we need JS?
+       ---web-page Revesion----
+  --HTML--is a set of specifications to describe the elements of your page.
+    --??
+  --CSS---is set of rules to tell browser how to display those elements.
+    --??
+  --JavaScript--is the only programming language of the three. That is used to dynamically change the behavior, display and interactions of a page.
+    --??
+    https://www.apple.com
+     request sent--how request sent?
+     --network --ip address(192.168.10.1)?
+       ---request
+           --reponse--html--
+              ---html rendrer-- which contructs your html in to this viewable format on your browser.
+                ---also-css--
+              ---css rendrer-- which contructs your css in to this viewable format on your browser.
+
+        may be you sent javascript to your browser
+               ---request-- is sent
+                  --html&css have thier own rendrer
+                  --browser have interpretor
+                  ---computer have compiler
+                  -javascript-its pro langu which is used to give instruction to change html and css Properties 
+                  ---background color or others
+
+                why we need javascript ?
+
+                --example -- evangadi userlogin form
+                           --intractivity of userlogin from
+                           imagination plus intractivity with customer
+    
+8.2 - How do we add JS into our HTML?
+      --1-- frst way
+    ---user script tag 
+        <script>
+
+        </script>
+---------------------------------------------------------------------------
+    --may be you use it at head tag--
+    --may be you use it at the begin of body tag--
+    --may be you use it at the bottom of body tag--
+    ===IT IS NOT RECOMMENDED WAY----?
+       
+       --2-- second way
+
+       <script type="text/javascript" src="js/javascript.js"></script>
+-----------------------------------------------------------------------
+        --may be you use it at head tag--
+         <script type="text/javascript" src="js/javascript.js"></script>
+         =the aim of js is to manipulate the html elements during this one thing is happen
+           what is that--our browser renders this html line by line when it looks this script tag at head of the html it finds the script tag which is not a part of html part during this our javascript facing with error b/cs it is not a part of
+            element---to avoid this ?
+        --may be you use it at the bottom of body tag--
+       ---use script tag at bottom
+        <script type="text/javascript" src="js/javascript.js"></script>
+                    ----------or proper way-----------
+        --may be you use it at head tag--
+        <script type="text/javascript" src="js/javascript.js"defer></script>
+         defer-- means include it at the last
+    8.3 - Understanding DOM: how do HTML and JS work together?
+            DOM--Document Object Model
+            DOM--connector of HTML and JS
+            DOM--means-it is a standard/rule which is respected by browser and javascript
+            DOM--it is a standard/rule  which agree browser and javascript to cowork togather
+            ---browser--follow DOM Rule and do its activity
+            ---javascript--follow DOM Rule and do its activity
+            ##now how we use DOM to affect our webpage/website##
+            DOM---it is a rule which every language depends on it and write code usig any language then browser have responsibility to implement and understand that code.
+           
+            ---so now the javascript is a language which respects the DOM rule-----
+var abebe={
+    pr1:1;
+    pr2:2;
+}
+abebe.pr1=55;
+
+ DOM ---when you went to change your vlue can prepare for you like this and renders the DOM 
+       again and construct your webpage again and redisplay again
+       https://www.w3schools.com/js/js_htmldom.asp
+
+var document={
+    html:{
+        head:{
+            title:{
+                value:"document"
+            }
+        }
+    }
+}
+html.head.title.value="abebe"
+
+8.4 - The DOM tree
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> the title</title>
+</head>
+
+<body>
+    <script>
+
+    </script>
+
+    <script type="text/javascript" src="js/javascript.js"></script>
+</body>
+
+</html>
+https://www.w3schools.com/js/js_htmldom.asp
+var document={
+    html:{
+        head:{
+            title:{
+                value:"title"
+            }
+        }
+    }
+}
+html.head.title.value="abebe"
+
+8.5 - DOM manipulation: introduction
+---use js to affect the Properties of css and html and cause effect on our browser is called DOM Manupulation.
+---use js,DOM when your user wents to make a change on the DOM to aknowledage the answer for the customer to intract with user.
+---manipulate=-to make something to change something smously. 
+Manupulating DOM involves two steeps
+--1- finding/selecting the element we went to work with
+--2- altering the next or attributies of the element
+var document={
+    html:{
+        head:{
+            title:{
+                value:"title"
+            }
+        }
+    }
+}
+html.head.title.value="abebe"
+==we manupulate via this document word as an enterance pathway to apply each and every html and css properties.
+8.6 - DOM manipulation: selecting elements (part 1)
+--slecting elements on html using javascript
+-----selection  type------
+--single element selection
+--mulitiple selection
+-------------------------------
+indivisual element selection
+-----=there are three common ways to select a specific elements---===
+==1== using the getElementById() Method
+EX--
+==2==using the queryselector()method
+Ex--
+==3==By traversing from one element to the next 
+ will see example later
+8.7 - DOM manipulation: selecting elements (part 2)
+-if you went to select one element only
+      Use-- getElementQueryselector()
+           it seslect only one elements even the properties we inludes many elements
+             --document.queryselector(."yellow")
+             --document.queryselector(li)
+
+             ==so Here we use qquery selector and getElementById
+             to select single element
+
+     =====================
+     how we manipulate or affect our selected element
+
+     ==Mulitiple selector
+     ++++++++++++++++++++++++++++
+     how we affect mulitiple selector
+     1-document.getElementclassName()
+     2-Document.getElementByTagName()
+     3-
+      
+
+8.8 - Selecting elements (HTML collection vs NodeList )
+
+//live Dom--? Immidatly online on the value.
+$$$-getElementsByClassName---return live dom collection Object--so w can not able to see them in this case we have to save them on temporary array we loop on them.
+$$$-getElementsByTagName---does mot return live dom collections--so we have do for loop to display elements
+$$$-getElementsByquweryselectorAll---does mot return live dom collections--so we have do for loop to display elements
+Accesing by Referance
+    Aceesing BY Refrance 
+    Accesing By Value
+
+8.9 - Selecting elements (traversing between multiple elements)
+== now we are focusing on the nighbouring elements to affect the srounding elements
+==we can traversing from one element to another by using the following properties==
+1-parseMode
+2-previouseElementSibling
+3-nextElementSibling
+4-firstElementChild
+5-lastElementChild
+8.10 - Altering values (working with HTML content)
+up to now we only change classname===but now we can change any thing using our javascript
+---how we change ang text---
+use textcontent 
+---how i can create new paragrap using javascript---
+     createElement()---textcontent
+apendchild()--to add a new element to somewhere as a new element
+
+
+8.11 - Altering values (working with HTML attribute)
+you have the following properties methods you are request to altering
+--classname()
+--classlist()---
+--id()
+----------------------
+--hasAttribute()
+--getAttribute()
+--setAttribute()
+--removeAttribute()
+
+8.12 - Altering values (working with inline styling)
